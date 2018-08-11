@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const product_1 = require("./product");
 let Basket = class Basket {
 };
 __decorate([
@@ -20,11 +19,15 @@ __decorate([
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Number)
-], Basket.prototype, "quantity", void 0);
+], Basket.prototype, "userId", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => product_1.Product, p => p.basket),
-    __metadata("design:type", Array)
-], Basket.prototype, "products", void 0);
+    typeorm_1.Column(),
+    __metadata("design:type", Number)
+], Basket.prototype, "productId", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", Number)
+], Basket.prototype, "quantity", void 0);
 Basket = __decorate([
     typeorm_1.Entity()
 ], Basket);

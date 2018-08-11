@@ -1,6 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 import {Manufacturer} from './manufacturer';
-import { Basket } from './basket';
 
 @Entity()
 export class Product {
@@ -17,6 +16,4 @@ export class Product {
   @ManyToOne(() => Manufacturer, m => m.products)
   manufacturer: Manufacturer;
 
-  @ManyToOne(() => Basket, b => b.products)
-  basket: Basket;
 }

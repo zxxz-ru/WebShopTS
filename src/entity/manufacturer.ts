@@ -13,6 +13,7 @@ export class Manufacturer {
   @Column("varchar", {length: 400})
     address: string;
 
+
   @OneToMany(() => Product, p => p.manufacturer)
     products: Product[];
 }
