@@ -8,13 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const manufacturer_1 = require("./manufacturer");
 const basket_1 = require("./basket");
 let Product = class Product {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn("int"),
+    typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], Product.prototype, "id", void 0);
 __decorate([
@@ -37,3 +38,4 @@ Product = __decorate([
     typeorm_1.Entity()
 ], Product);
 exports.Product = Product;
+//# sourceMappingURL=product.js.map

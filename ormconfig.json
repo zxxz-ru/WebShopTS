@@ -1,19 +1,19 @@
 {
   "type": "postgres",
-  "host": "localhost",
-  "port": 3306,
+  "host": "127.0.0.1",
+  "port": 5432,
   "username": "vmodestov",
   "password": "Aex3K@eZ",
   "database": "web_shop",
   "synchronize": true,
   "logging": false,
   "entities": [
-    "src/entity/**/*.ts"
+    "build/entity/**/*.js"
   ],
   "migrations": [
-    "src/migration/**/*.ts"
+    "build/migration/**/*.js"
   ],
-  "subscribers": [
-    "src/subscriber/**/*.ts"
-  ]
+  "cli": {
+            "migrationsDir": "build/migration/**/*.js"
+      }
 }

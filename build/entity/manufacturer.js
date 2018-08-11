@@ -8,12 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const product_1 = require("./product");
 let Manufacturer = class Manufacturer {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn("int"),
+    typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], Manufacturer.prototype, "id", void 0);
 __decorate([
@@ -32,3 +33,4 @@ Manufacturer = __decorate([
     typeorm_1.Entity()
 ], Manufacturer);
 exports.Manufacturer = Manufacturer;
+//# sourceMappingURL=manufacturer.js.map

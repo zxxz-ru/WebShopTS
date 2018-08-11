@@ -16,15 +16,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@types/node": "^10.5.7",
-    "typeorm": "^0.2.7",
-    "typescript": "^2.1.5",
-    "rimraf": "latest"
+    "rimraf": "latest",
+    "typescript": "^2.1.5"
   },
   "dependencies": {
+    "@types/node": "^10.5.8",
+    "@types/pg": "^7.4.10",
     "express": "^4.16.3",
     "pg": "^7.4.3",
     "reflect-metadata": "^0.1.12",
-    "typescript": "^2.9.2"
+    "typeorm": "^0.2.7"
   }
 }

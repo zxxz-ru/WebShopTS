@@ -8,10 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const product_1 = require("./product");
 let Basket = class Basket {
 };
+__decorate([
+    typeorm_1.PrimaryGeneratedColumn(),
+    __metadata("design:type", Number)
+], Basket.prototype, "id", void 0);
 __decorate([
     typeorm_1.OneToMany(() => product_1.Product, p => p.basket),
     __metadata("design:type", Array)
@@ -20,3 +25,4 @@ Basket = __decorate([
     typeorm_1.Entity()
 ], Basket);
 exports.Basket = Basket;
+//# sourceMappingURL=basket.js.map

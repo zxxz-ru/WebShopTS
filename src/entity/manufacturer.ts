@@ -4,7 +4,7 @@ import { Product } from './product';
 @Entity()
 export class Manufacturer {
 
-  @PrimaryGeneratedColumn("int")
+  @PrimaryGeneratedColumn()
     id: number;
 
   @Column("varchar", {length: 25})

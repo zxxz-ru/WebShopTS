@@ -8,11 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
+const user_1 = require("./user");
 let Profile = class Profile {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn("int"),
+    typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], Profile.prototype, "id", void 0);
 __decorate([
@@ -31,7 +33,13 @@ __decorate([
     typeorm_1.Column("varchar", { length: 250 }),
     __metadata("design:type", String)
 ], Profile.prototype, "photo", void 0);
+__decorate([
+    typeorm_1.OneToOne(() => user_1.User, u => u.profile),
+    typeorm_1.JoinColumn(),
+    __metadata("design:type", user_1.User)
+], Profile.prototype, "user", void 0);
 Profile = __decorate([
     typeorm_1.Entity()
 ], Profile);
 exports.Profile = Profile;
+//# sourceMappingURL=profile.js.map

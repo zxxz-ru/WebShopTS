@@ -1,15 +1,15 @@
 {
     "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./build",
-    "target": "es6",
+    "rootDir": "src",
+    "outDir": "build",
+    "target": "ES6",
     "module": "commonjs",
+    "baseUrl": "/home/v_modestov/Projects/Shop",
     "moduleResolution": "node",
     "removeComments": true,
     "sourceMap": true,
-    "watch": true,
+    "watch": false,
     "noImplicitAny": false,
-  "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "types": [

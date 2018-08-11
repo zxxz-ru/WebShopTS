@@ -5,7 +5,7 @@ import { Basket } from './basket';
 @Entity()
 export class Product {
 
-  @PrimaryGeneratedColumn("int")
+  @PrimaryGeneratedColumn()
     id: number;
 
   @Column("varchar", {length: 25})
