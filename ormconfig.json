@@ -14,6 +14,6 @@
     "build/migration/**/*.js"
   ],
   "cli": {
-            "migrationsDir": "build/migration/**/*.js"
+            "migrationsDir": "src/migration/"
       }
 }
