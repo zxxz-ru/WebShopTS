@@ -1,6 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn } from 'typeorm';
 import { Profile } from './profile';
-import { Basket } from './basket'; 
 
 @Entity()
 export class User {
@@ -18,10 +17,5 @@ export class User {
   @JoinColumn()
   profile : Profile;
 
-  @OneToOne(() => Basket, {
-    cascade: true
-  })
-  @JoinColumn()
-  basket : Basket;
 
 }
