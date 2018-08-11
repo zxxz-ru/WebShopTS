@@ -18,6 +18,10 @@ __decorate([
     __metadata("design:type", Number)
 ], Basket.prototype, "id", void 0);
 __decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", Number)
+], Basket.prototype, "quantity", void 0);
+__decorate([
     typeorm_1.OneToMany(() => product_1.Product, p => p.basket),
     __metadata("design:type", Array)
 ], Basket.prototype, "products", void 0);
