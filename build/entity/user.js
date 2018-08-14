@@ -26,7 +26,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => basket_1.Basket, basket => basket.users),
+    typeorm_1.OneToMany(() => basket_1.Basket, basket => basket.user),
     __metadata("design:type", Array)
 ], User.prototype, "baskets", void 0);
 User = __decorate([

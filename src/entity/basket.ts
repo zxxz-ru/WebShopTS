@@ -20,6 +20,6 @@ export class Basket {
   @OneToMany(() => Item, item => item.basket )
     items: Item[];
 
-  @ManyToOne(() => User, user => user.basket)
-    users: User[];
+  @ManyToOne(() => User, user => user.baskets)
+    user: User;
 }

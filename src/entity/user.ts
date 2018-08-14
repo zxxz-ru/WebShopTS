@@ -13,6 +13,6 @@ export class User {
   @Column("varchar", {length: 25})
     password: string;
 
-  @OneToMany(() => Basket, basket => basket.users)
-  basket: Basket;
+  @OneToMany(() => Basket, basket => basket.user)
+  baskets: Basket[];
 }

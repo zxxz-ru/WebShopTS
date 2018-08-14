@@ -35,9 +35,9 @@ __decorate([
     __metadata("design:type", Array)
 ], Basket.prototype, "items", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => user_1.User, user => user),
-    __metadata("design:type", Array)
-], Basket.prototype, "users", void 0);
+    typeorm_1.ManyToOne(() => user_1.User, user => user.baskets),
+    __metadata("design:type", user_1.User)
+], Basket.prototype, "user", void 0);
 Basket = __decorate([
     typeorm_1.Entity()
 ], Basket);
