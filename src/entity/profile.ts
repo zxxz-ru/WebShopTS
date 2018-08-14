@@ -1,10 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn } from 'typeorm';
-import { User } from './user';
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm';
+import { Photo } from './photo';
 
 @Entity()
 export class Profile {
 
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn()
     id: number;
 
   @Column("varchar", {length: 25})
@@ -16,10 +16,6 @@ export class Profile {
   @Column("int")
     age: number;
 
-  @Column("varchar", {length: 250})
-    photo: string;
-
-  @OneToOne(() => User, u => u.profile)
-  @JoinColumn()
-    user: User;
+  @OneToMany(() => Photo, photo => photo.profile)
+    photos: Photo[]; 
 }

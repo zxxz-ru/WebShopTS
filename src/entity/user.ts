@@ -1,5 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn } from 'typeorm';
-import { Profile } from './profile';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Basket } from './basket';
 
 @Entity()
 export class User {
@@ -13,9 +13,6 @@ export class User {
   @Column("varchar", {length: 25})
     password: string;
 
-  @OneToOne(() => Profile, p => p.user)
-  @JoinColumn()
-  profile : Profile;
-
-
+  @OneToMany(() => Basket, basket => basket.users)
+  basket: Basket;
 }

@@ -14,6 +14,6 @@ export class Manufacturer {
     address: string;
 
 
-  @OneToMany(() => Product, p => p.manufacturer)
+  @OneToMany(() => Product, product => product.manufacturer)
     products: Product[];
 }

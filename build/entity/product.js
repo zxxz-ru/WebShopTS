@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const manufacturer_1 = require("./manufacturer");
+const item_1 = require("./item");
 let Product = class Product {
 };
 __decorate([
@@ -29,6 +30,10 @@ __decorate([
     typeorm_1.ManyToOne(() => manufacturer_1.Manufacturer, m => m.products),
     __metadata("design:type", manufacturer_1.Manufacturer)
 ], Product.prototype, "manufacturer", void 0);
+__decorate([
+    typeorm_1.OneToMany(() => item_1.Item, item => item.product),
+    __metadata("design:type", Array)
+], Product.prototype, "items", void 0);
 Product = __decorate([
     typeorm_1.Entity()
 ], Product);

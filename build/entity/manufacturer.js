@@ -26,7 +26,7 @@ __decorate([
     __metadata("design:type", String)
 ], Manufacturer.prototype, "address", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => product_1.Product, p => p.manufacturer),
+    typeorm_1.OneToMany(() => product_1.Product, product => product.manufacturer),
     __metadata("design:type", Array)
 ], Manufacturer.prototype, "products", void 0);
 Manufacturer = __decorate([

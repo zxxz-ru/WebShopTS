@@ -1,4 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany, ManyToOne } from 'typeorm';
+import { User } from './user';
+import { Item } from './item';
 
 @Entity()
 export class Basket {
@@ -9,11 +11,15 @@ export class Basket {
   @Column()
     userId: number;
 
-  @Column()
-    productId: number;
+  @Column("timestamp")
+    date: Date;
 
   @Column()
-    quantity: number;
+    status: number;
 
+  @OneToMany(() => Item, item => item.basket )
+    items: Item[];
 
+  @ManyToOne(() => User, user => user.basket)
+    users: User[];
 }

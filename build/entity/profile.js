@@ -10,11 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const user_1 = require("./user");
+const photo_1 = require("./photo");
 let Profile = class Profile {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn(),
+    typeorm_1.PrimaryColumn(),
     __metadata("design:type", Number)
 ], Profile.prototype, "id", void 0);
 __decorate([
@@ -30,14 +30,9 @@ __decorate([
     __metadata("design:type", Number)
 ], Profile.prototype, "age", void 0);
 __decorate([
-    typeorm_1.Column("varchar", { length: 250 }),
-    __metadata("design:type", String)
-], Profile.prototype, "photo", void 0);
-__decorate([
-    typeorm_1.OneToOne(() => user_1.User, u => u.profile),
-    typeorm_1.JoinColumn(),
-    __metadata("design:type", user_1.User)
-], Profile.prototype, "user", void 0);
+    typeorm_1.OneToMany(() => photo_1.Photo, photo => photo.profile),
+    __metadata("design:type", Array)
+], Profile.prototype, "photos", void 0);
 Profile = __decorate([
     typeorm_1.Entity()
 ], Profile);
