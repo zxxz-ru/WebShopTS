@@ -1,20 +1,14 @@
 import "reflect-metadata";
 import {createConnection} from "typeorm";
+import { User_Profile } from "./initdb/user_profile";
 
-createConnection(
-  // {
-  //       // type: "postgres",
-  //       // host: "localhost",
-  //       // port: 5432,
-  //       // username: "vmodestov",
-  //       // password: "Aex3K@eZ",
-  //       // database: "web_shop",
-  //       // entities: [
-  //       //   __dirname + "build/entity/*js"
-  //       //       ],
-  //       // synchronize: true,
-  //       // logging: false
-  // }
-).then(connection => {
-  console.log('Connected to database on port: 5432');
-   }).catch(error => console.log(error));
+class Init {
+async init() {
+  const conn = await createConnection();
+  // const user_profile = new User_Profile(conn);
+  // await user_profile.saveUserProfile();
+  }
+}
+
+const init = new Init();
+init.init();
