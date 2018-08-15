@@ -1,7 +1,7 @@
 import { Connection, EntityManager } from 'typeorm';
 import { Photo } from '../entity/photo';
 
-export class User_Profile {
+export class PhotoInit {
 
 readonly photos = [
 { name: 'bakery', url : 'https://cdn.stocksnap.io/img-thumbs/960w/ZAG3KUMDTW.jpg', prid: 1 },

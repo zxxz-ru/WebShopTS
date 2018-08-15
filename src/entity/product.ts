@@ -11,8 +11,11 @@ export class Product {
   @Column("varchar", {length: 25})
     name: string;
 
-  @Column("int")
+  @Column("numeric")
     cost: number;
+
+  @Column()
+    manufacturerId: number;
 
   @ManyToOne(() => Manufacturer, m => m.products)
   manufacturer: Manufacturer;

@@ -33,8 +33,7 @@ async save() {
         const p = new Product();
         p.name = this.products[i].name;
         p.cost = this.products[i].cost;
-        // need manufacturId field.
-        // p.manufacturerId = this.products[i].id;
+        p.manufacturerId = this.products[i].id;
         manager.save(p);
     }
 
