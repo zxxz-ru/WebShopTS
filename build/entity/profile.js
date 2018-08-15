@@ -37,4 +37,3 @@ Profile = __decorate([
     typeorm_1.Entity()
 ], Profile);
 exports.Profile = Profile;
-//# sourceMappingURL=profile.js.map

@@ -33,4 +33,3 @@ Manufacturer = __decorate([
     typeorm_1.Entity()
 ], Manufacturer);
 exports.Manufacturer = Manufacturer;
-//# sourceMappingURL=manufacturer.js.map

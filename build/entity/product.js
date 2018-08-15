@@ -38,4 +38,3 @@ Product = __decorate([
     typeorm_1.Entity()
 ], Product);
 exports.Product = Product;
-//# sourceMappingURL=product.js.map

@@ -7,7 +7,7 @@
     "baseUrl": "/home/v_modestov/Projects/Shop",
     "moduleResolution": "node",
     "removeComments": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "watch": false,
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,

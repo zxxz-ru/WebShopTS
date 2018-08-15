@@ -42,4 +42,3 @@ Basket = __decorate([
     typeorm_1.Entity()
 ], Basket);
 exports.Basket = Basket;
-//# sourceMappingURL=basket.js.map
