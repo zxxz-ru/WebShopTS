@@ -1,21 +1,27 @@
-import "reflect-metadata";
-import {createConnection} from "typeorm";
-import { PhotoInit } from "./initdb/photo";
-import { ProductInit } from "./initdb/product";
-import { ManufacturerInit } from "./initdb/manufacturer";
+import * as express  from 'express';
+import { UserRouter } from './controller/user/userRouter';
 
-class Init {
-async init() {
-  const conn = await createConnection();
-  const ph = new PhotoInit(conn);
-  const pr = new ProductInit(conn);
-  const m = new ManufacturerInit(conn);
-  await m.save();
-  await pr.save();
-  await ph.save();
+class Index {
+run() {
+  const app:express.Application = express();
+  const userRouter = new UserRouter();
+  const usr_router = userRouter.getRouter();
+  app.get('/', (req: express.Request, res: express.Response) => {
+    res.send(`<p>Request came from root.</p>`);   
+  });
 
+  app.get('/test', (req: express.Request, res: express.Response) => {
+    res.send(`<p>Request came from test. login: ${req.query.login} & password: ${req.query.pass}</p>`);   
+  });
+  app.post('/', (req: express.Request,res:express.Response) => {
+    console.log(req.route);
+    res.end();
+  });
+  app.use("/usr", usr_router); 
+  app.listen(3000);
+    console.log("app is up on port 3000");
   }
 }
 
-// const init = new Init();
-// init.init();
+const init = new Index();
+init.run();
